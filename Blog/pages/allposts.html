@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pondering Life</title>
+        <link rel="stylesheet" type="text/css" href="/style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#top" class="logo">Pondering Life</a>
+            <div class="menuToggle"></div>
+        </header>
+        <u1 class="navigation">
+            <li><a href="/index.html#" onclick="toggleMenu();">Home</a></li>
+            <li><a href="/index.html#about" onclick="toggleMenu();">About</a></li>
+            <!-- <li><a href="Posts.html" onclick="toggleMenu();">All Posts</a></li> -->
+            <li><a href="#posts" onclick="toggleMenu();">All Posts</a></li>
+            <li><a href="/index.html#contact" onclick="toggleMenu();">Contact</a></li>
+        </u1>
+        <section class="bannerpost" id="top">
+            <img src="/source/images/tablemountain.jpg" class="cover">
+            <div class="contentBx">
+                <a href="#posts" class="btn-1">All Posts</a>
+                <h4>"Not all those who wander are lost" - J.R.R. TOLKIEN</h4>
+            </div>
+        </section>
+        <section class="post" id="posts">
+            <div class="title">
+                <h2>Explore</h2>
+            </div>
+            <div class="contentBx">
+                <div class="postColumn">
+                    <div class="postBox">
+                        <div class="imgBx">
+                            <img src="/source/images/post1.jpg" class="cover">
+                        </div>
+                        <div class="textBx">
+                            <h3>Let's think about drugs</h3>
+                            <a href="/posts/post001.html" class="btn">Read More</a>
+                        </div>
+                    </div>
+                    <!-- <div class="postBox">
+                        <div class="imgBx">
+                            <img src="post2.jpg" class="cover">
+                        </div>
+                        <div class="textBx">
+                            <h3>How did this idea come to you.</h3>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div>
+                    <div class="postBox">
+                        <div class="imgBx">
+                            <img src="post3.jpg" class="cover">
+                        </div>
+                        <div class="textBx">
+                            <h3>How did this idea come to you.</h3>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="postColumn">
+                    <div class="postBox">
+                        <div class="imgBx">
+                            <img src="/source/images/esteban-lopez-t9jQie6cUhg-unsplash.jpg" class="cover">
+                        </div>
+                        <div class="textBx">
+                            <h3>The History of Drugs</h3>
+                            <a href="/posts/TheHistoryOfDrugs.html" class="btn">Read More</a>
+                        </div>
+                    </div>
+                    <!-- <div class="postBox eh">
+                        <div class="imgBx">
+                            <img src="post5.jpg" class="cover">
+                        </div>
+                        <div class="textBx">
+                            <h3>How did this idea come to you.</h3>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div>
+                    <div class="postBox">
+                        <div class="imgBx">
+                            <img src="post6.jpg" class="cover">
+                        </div>
+                        <div class="textBx">
+                            <h3>How did this idea come to you.</h3>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="postColumn">
+                    <div class="postBox">
+                        <div class="imgBx">
+                            <img src="/source/images/legal.jpg" class="cover">
+                        </div>
+                        <div class="textBx">
+                            <h3>Should We Legalize Drugs?</h3>
+                            <a href="/posts/ShouldLegalizeDrugs.html" class="btn">Read More</a>
+                        </div>
+                    </div>
+                    <!-- <div class="postBox">
+                        <div class="imgBx">
+                            <img src="post8.jpg" class="cover">
+                        </div>
+                        <div class="textBx">
+                            <h3>How did this idea come to you.</h3>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div>
+                    <div class="postBox eh">
+                        <div class="imgBx">
+                            <img src="post9.jpg" class="cover">
+                        </div>
+                        <div class="textBx">
+                            <h3>How did this idea come to you.</h3>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer>
+            <a href="#" class="logo">Pondering Life</a>
+            <u1 class="footerMenu">
+                <li><a href="/index.html#">Home</a></li>
+                <li><a href="/index.html#about">About</a></li>
+                <!-- <li><a href="#post">Latest Posts</a></li> -->
+                <li><a href="#posts">All Posts</a></li>
+                <li><a href="/index.html#contact">Contact</a></li>
+            </u1>
+        </footer>
+        <script>
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.onclick = function(){
+                menuToggle.classList.toggle('active');
+                navigation.classList.toggle('active');
+            }
+        
+            window.addEventListener('scroll', function(){
+                const header = document.querySelector('header');
+                header.classList.toggle('sticky',window.scrollY > 0);
+            })
+
+            function toggleMenu(){
+                menuToggle.classList.remove('active');
+                navigation.classList.remove('active');
+            }
+        </script>
+    </body>       
+</html>
